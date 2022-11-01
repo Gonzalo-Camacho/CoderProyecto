@@ -1,0 +1,46 @@
+@import "../base/variables";
+
+footer{
+    background-color: $color-uno;
+    @include flex (flex, space-around, center);
+    height: 70px;
+    nav{
+        ul{
+            list-style: none;
+            @include flex (flex, space-around, center);
+            width: 500px;
+            li{
+                a{
+                    text-decoration: none;
+                    color:$color-dos;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    transition: 0.3s;
+                    &:hover{
+                        background-color: $color-dos;
+                        color: white;
+                        padding: 2% 5% 2% 5%;
+                    }
+                }
+            }
+        }
+    }
+    div{
+        @include flex (flex, space-around, center);
+        width: 300px;
+        h4{
+            margin: 1%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+        }
+        a{
+            img{
+                width: 32px;
+                height: 32px;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

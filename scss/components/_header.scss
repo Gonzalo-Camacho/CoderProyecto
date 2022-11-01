@@ -1,0 +1,40 @@
+@import "../base/variables";
+
+header{
+    background-color:$color-uno;
+    position: sticky;
+    top:0;
+    div{
+        @include flex (flex, space-around, center);
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius:100%;
+            margin: 1% 0 1% 1%;
+        }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        nav{
+            width: 800px;
+            ul{
+                @include flex (flex, space-around, center);
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        color:$color-dos;
+                        font-size: large;
+                        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: $color-dos;
+                            color: white;
+                            padding: 2% 5% 2% 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

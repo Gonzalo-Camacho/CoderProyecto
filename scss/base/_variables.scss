@@ -1,0 +1,9 @@
+$color-uno:#ffeedd;
+$color-dos:#6A8D73;
+
+
+@mixin flex ($flex, $justify, $align){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,110 @@
+@import "../base/variables";
+
+/*----------INDEX----------*/
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.285)), url(../img/fondoo.jpg);
+    width:100%;
+    height: calc(150vh - 147.33px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex (flex, center, flex-start);
+
+    h2{
+        color: white;
+        width: 253px;
+        height: 60px;
+        text-align: center;
+        border: solid black;
+        background-color: rgba(0, 0, 0, 0.413);
+        margin: 1%;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size:23px;
+    }
+}
+
+.productos{
+    .TarjetasProductos{
+        @include flex (flex, space-around, center);
+        flex-wrap: wrap;
+        div{
+            border:solid black;
+            height: 320px;
+            text-align: center;
+            background-color: #ffeedd56;
+            transition: 0.5s;
+            img{
+                width: 250px;
+                height: 250px;
+            }
+            h3{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin: 2%;
+                font-size:medium;
+            }
+            a{
+                text-decoration: none;
+                background-color: $color-dos;
+                color: white;
+                padding: 1% 2.5% 1% 2.5%;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                &:hover{
+                    background-color: #3e5243;
+                    transition: 0.5s;
+                }
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.imagenesSection{
+    div{
+        @include flex (flex, space-around, center);
+        margin: 5%;
+        img{
+            width: 520px;
+            height: 520px;
+        }
+    }
+}
+
+/*----------MAIN DE LAS DEMAS PÁGINAS----------*/
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    div{
+        text-align: center;
+        h2{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        a{
+            text-decoration: none;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: 0.5s;
+            color: $color-dos;
+            text-decoration: underline;
+            &:hover{
+                background-color: $color-dos;
+                color: white;
+                padding: 2% 5% 2% 5%;
+            }
+        }
+        img{
+            width: 350px;
+            height: 330px;
+            transition: 0.3s;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}

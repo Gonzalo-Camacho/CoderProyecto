@@ -1,0 +1,194 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+header {
+  background-color: #ffeedd;
+  position: sticky;
+  top: 0; }
+  header div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    header div img {
+      height: 100px;
+      width: 100px;
+      border-radius: 100%;
+      margin: 1% 0 1% 1%; }
+    header div h1 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+    header div nav {
+      width: 800px; }
+      header div nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        header div nav ul li {
+          list-style: none; }
+          header div nav ul li a {
+            text-decoration: none;
+            color: #6A8D73;
+            font-size: large;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transition: 0.3s; }
+            header div nav ul li a:hover {
+              background-color: #6A8D73;
+              color: white;
+              padding: 2% 5% 2% 5%; }
+
+/*----------INDEX----------*/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.285)), url(../img/fondoo.jpg);
+  width: 100%;
+  height: calc(150vh - 147.33px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .hero h2 {
+    color: white;
+    width: 253px;
+    height: 60px;
+    text-align: center;
+    border: solid black;
+    background-color: rgba(0, 0, 0, 0.413);
+    margin: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 23px; }
+
+.productos .TarjetasProductos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  .productos .TarjetasProductos div {
+    border: solid black;
+    height: 320px;
+    text-align: center;
+    background-color: #ffeedd56;
+    transition: 0.5s; }
+    .productos .TarjetasProductos div img {
+      width: 250px;
+      height: 250px; }
+    .productos .TarjetasProductos div h3 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 2%;
+      font-size: medium; }
+    .productos .TarjetasProductos div a {
+      text-decoration: none;
+      background-color: #6A8D73;
+      color: white;
+      padding: 1% 2.5% 1% 2.5%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+      .productos .TarjetasProductos div a:hover {
+        background-color: #3e5243;
+        transition: 0.5s; }
+    .productos .TarjetasProductos div:hover {
+      transform: scale(1.1); }
+
+.imagenesSection div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5%; }
+  .imagenesSection div img {
+    width: 520px;
+    height: 520px; }
+
+/*----------MAIN DE LAS DEMAS PÁGINAS----------*/
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto; }
+  .gridContainer div {
+    text-align: center; }
+    .gridContainer div h2 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 25px; }
+    .gridContainer div a {
+      text-decoration: none;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      transition: 0.5s;
+      color: #6A8D73;
+      text-decoration: underline; }
+      .gridContainer div a:hover {
+        background-color: #6A8D73;
+        color: white;
+        padding: 2% 5% 2% 5%; }
+    .gridContainer div img {
+      width: 350px;
+      height: 330px;
+      transition: 0.3s; }
+      .gridContainer div img:hover {
+        transform: scale(1.05); }
+
+footer {
+  background-color: #ffeedd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px; }
+  footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px; }
+    footer nav ul li a {
+      text-decoration: none;
+      color: #6A8D73;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      transition: 0.3s; }
+      footer nav ul li a:hover {
+        background-color: #6A8D73;
+        color: white;
+        padding: 2% 5% 2% 5%; }
+  footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px; }
+    footer div h4 {
+      margin: 1%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: medium; }
+    footer div a img {
+      width: 32px;
+      height: 32px;
+      transition: 0.5s; }
+      footer div a img:hover {
+        transform: scale(1.1); }
+
+/*--------------------MEDIA QUERY INDEX--------------------*/
+@media (max-width: 1035px) {
+  .imagenesSection div {
+    flex-direction: column; } }
+
+@media (max-width: 740px) {
+  footer nav ul {
+    display: none; }
+  header nav ul {
+    flex-direction: column; }
+  .imagenesSection div img {
+    width: 250px;
+    height: 300px; } }
+
+/*--------------------MEDIA QUERY INDEX--------------------*/
+/*--------------------MEDIA QUERY SOBRES--------------------*/
+@media (max-width: 840px) {
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; } }
+
+@media (max-width: 630px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 9, 1fr; } }
+
+/*--------------------MEDIA QUERY SOBRES--------------------*/
